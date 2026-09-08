@@ -1,0 +1,355 @@
+<title>Dogoku Privacy Policy</title>
+<style>
+  :root{
+    --bg: #eef6fb;
+    --bg-grain: #e3eff8;
+    --surface: #ffffff;
+    --surface-line: #dbe7f0;
+    --text: #1f3b52;
+    --text-muted: #5c7385;
+    --text-faint: #8ba0af;
+    --accent: #e8782e;
+    --accent-ink: #8a4416;
+    --accent-soft: #fdeee2;
+    --link: #c2600f;
+    --focus: #2f7fb8;
+    --toggle-track: #dbe7f0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #101b24;
+      --bg-grain: #0c141b;
+      --surface: #17242e;
+      --surface-line: #2b3f4d;
+      --text: #e8f0f5;
+      --text-muted: #9fb4c2;
+      --text-faint: #6d8393;
+      --accent: #f28c47;
+      --accent-ink: #ffd9b8;
+      --accent-soft: #2c2116;
+      --link: #f6a05c;
+      --focus: #5fa8dd;
+      --toggle-track: #263845;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #101b24;
+    --bg-grain: #0c141b;
+    --surface: #17242e;
+    --surface-line: #2b3f4d;
+    --text: #e8f0f5;
+    --text-muted: #9fb4c2;
+    --text-faint: #6d8393;
+    --accent: #f28c47;
+    --accent-ink: #ffd9b8;
+    --accent-soft: #2c2116;
+    --link: #f6a05c;
+    --focus: #5fa8dd;
+    --toggle-track: #263845;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 480px at 12% -10%, var(--bg-grain), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--accent-soft); color:var(--accent-ink); }
+
+  a{ color:var(--link); text-decoration-thickness:1px; text-underline-offset:2px; }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:4px; }
+
+  .page{ max-width:760px; margin:0 auto; padding:0 24px 96px; }
+
+  header.top{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px; padding:28px 0 20px;
+    border-bottom:1px solid var(--surface-line);
+    margin-bottom:40px;
+    flex-wrap:wrap;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand svg{ width:30px; height:30px; flex:none; }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.15; }
+  .brand-text .name{
+    font-family:"Baloo 2", "Segoe UI Rounded", system-ui, sans-serif;
+    font-weight:700; font-size:1.05rem; color:var(--text);
+    letter-spacing:0.01em;
+  }
+  .brand-text .tag{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--text-faint);
+  }
+
+  .langtoggle{
+    display:inline-flex; padding:3px; border-radius:999px;
+    background:var(--toggle-track); gap:2px;
+  }
+  .langtoggle button{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.72rem; letter-spacing:0.06em;
+    border:none; background:transparent; color:var(--text-muted);
+    padding:7px 16px; border-radius:999px; cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+  }
+  .langtoggle button[aria-pressed="true"]{
+    background:var(--surface); color:var(--accent-ink);
+    box-shadow:0 1px 2px rgba(0,0,0,0.08);
+  }
+
+  .doc-meta{ margin-bottom:36px; }
+  h1{
+    font-family:"Baloo 2", "Segoe UI Rounded", system-ui, sans-serif;
+    font-weight:700; font-size:clamp(1.8rem, 4vw, 2.3rem);
+    color:var(--text); margin:0 0 10px; text-wrap:balance;
+  }
+  .meta-row{
+    display:flex; flex-wrap:wrap; gap:6px 18px; align-items:baseline;
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.78rem; color:var(--text-muted);
+  }
+  .meta-row b{ color:var(--text); font-weight:600; }
+
+  section.clause{ margin:0 0 34px; }
+  section.clause h2{
+    display:flex; align-items:baseline; gap:12px;
+    font-family:"Baloo 2", "Segoe UI Rounded", system-ui, sans-serif;
+    font-weight:700; font-size:1.18rem; color:var(--text);
+    margin:0 0 10px; text-wrap:balance;
+  }
+  section.clause h2 .num{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.85rem; color:var(--accent); font-weight:600;
+    flex:none;
+  }
+  section.clause p{ margin:0 0 12px; color:var(--text); max-width:66ch; }
+  section.clause p:last-child{ margin-bottom:0; }
+  section.clause .muted{ color:var(--text-muted); }
+
+  .callout{
+    background:var(--surface); border:1px solid var(--surface-line);
+    border-left:3px solid var(--accent);
+    border-radius:10px; padding:16px 18px; margin:14px 0 0;
+    max-width:66ch;
+  }
+  .callout p{ margin:0; font-size:0.95rem; color:var(--text-muted); }
+
+  footer.doc-footer{
+    margin-top:56px; padding-top:24px; border-top:1px solid var(--surface-line);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:0.75rem; color:var(--text-faint);
+  }
+
+  .lang-block[hidden]{ display:none; }
+
+  @media (max-width:480px){
+    .page{ padding:0 16px 72px; }
+    header.top{ padding:20px 0 16px; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+
+<div class="page">
+
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="24" cy="24" r="24" fill="var(--accent-soft)"/>
+        <ellipse cx="24" cy="30" rx="8.5" ry="7" fill="var(--accent)"/>
+        <ellipse cx="13.5" cy="19" rx="4.4" ry="5.6" fill="var(--accent)"/>
+        <ellipse cx="22" cy="14.5" rx="4" ry="5" fill="var(--accent)"/>
+        <ellipse cx="31.5" cy="19" rx="4.4" ry="5.6" fill="var(--accent)"/>
+      </svg>
+      <div class="brand-text">
+        <span class="name">Dogoku: Woof Patrol</span>
+        <span class="tag" data-i18n-tag>PRIVACY POLICY</span>
+      </div>
+    </div>
+    <div class="langtoggle" role="group" aria-label="Language">
+      <button type="button" id="btn-en" aria-pressed="true">EN</button>
+      <button type="button" id="btn-ua" aria-pressed="false">UA</button>
+    </div>
+  </header>
+
+  <!-- ======================= ENGLISH ======================= -->
+  <div class="lang-block" data-lang="en">
+
+    <div class="doc-meta">
+      <h1>Privacy Policy</h1>
+      <div class="meta-row">
+        <span>Effective date: <b>September 7, 2026</b></span>
+        <span>Developer: <b>r.maiboroda777</b></span>
+        <span>Contact: <b><a href="mailto:r.maiboroda777@gmail.com">r.maiboroda777@gmail.com</a></b></span>
+      </div>
+    </div>
+
+    <section class="clause">
+      <p class="muted">This Privacy Policy explains what information the "Dogoku: Woof Patrol" mobile game ("the Game", "we") collects, how it is used, and what rights you have as a user.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">01</span>Information We Do Not Collect</h2>
+      <p>The Game does not require account registration and does not ask for your name, email address, phone number, or any other personal information directly. The Game has no chat, comments, or other user-generated content features.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">02</span>Data Stored Only On Your Device</h2>
+      <p>Your level progress, selected dog skin, and sound, vibration, and language settings are stored locally on your device only. This data is never transmitted to us — the Game has no backend server or user database. Uninstalling the app permanently deletes this data.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">03</span>Data Collected by Advertising Partners</h2>
+      <p>The Game displays ads through the AppLovin MAX mediation platform, which may connect to other third-party ad networks. These partners may automatically collect your device's advertising identifier (Google Advertising ID), device type and model, operating system version, IP address (which may be used to estimate an approximate location, such as country or region), and ad interaction data such as impressions and clicks — for ad delivery, personalization, performance measurement, and fraud prevention.</p>
+      <p class="muted">We do not directly control how each individual ad partner processes this data. Please review AppLovin's own privacy policy at <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a>.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">04</span>Your Advertising Choices</h2>
+      <p>You can limit ad personalization through your Android device settings (Settings → Google → Ads → "Opt out of Ads Personalization" or "Reset advertising ID"). Users located in the EU, UK, and Switzerland are shown a consent prompt regarding data collection for advertising purposes.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">05</span>Children's Privacy</h2>
+      <p>The Game is intended for a general audience and is not directed specifically at children under 13. We do not knowingly collect personal information from children.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">06</span>In-App Purchases</h2>
+      <p>The Game offers a one-time "Remove Ads" purchase through Google Play Billing, Google Play's official payment system. After purchase, interstitial ads are permanently disabled for that Google account, and can be restored on another device via "Restore Purchases". We do not see or store your payment card details — all payment processing is handled by Google Play, not by the app itself.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">07</span>Data Security</h2>
+      <p>Because the Game does not collect or store personal data on our own servers, the risk of a data breach on our end is minimal. Data processed by advertising partners is protected under their own respective security policies.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">08</span>Your Rights</h2>
+      <p>Depending on your country of residence, you may have the right to access, correct, or delete data processed by our advertising partners, and the right to withdraw consent for data processing used for advertising. For requests regarding data processed directly by AppLovin, please use the link in section 3. For any other inquiries, contact us at <a href="mailto:r.maiboroda777@gmail.com">r.maiboroda777@gmail.com</a>.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">09</span>Changes to This Policy</h2>
+      <p>We may update this Policy from time to time. The effective date at the top of the page reflects the most recent update. Continued use of the Game after changes constitutes acceptance of the updated Policy.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">10</span>Contact Us</h2>
+      <p>Questions about this Policy: <a href="mailto:r.maiboroda777@gmail.com">r.maiboroda777@gmail.com</a></p>
+    </section>
+
+  </div>
+
+  <!-- ======================= УКРАЇНСЬКА ======================= -->
+  <div class="lang-block" data-lang="ua" hidden>
+
+    <div class="doc-meta">
+      <h1>Політика конфіденційності</h1>
+      <div class="meta-row">
+        <span>Дата набуття чинності: <b>7 вересня 2026 р.</b></span>
+        <span>Розробник: <b>r.maiboroda777</b></span>
+        <span>Контакт: <b><a href="mailto:r.maiboroda777@gmail.com">r.maiboroda777@gmail.com</a></b></span>
+      </div>
+    </div>
+
+    <section class="clause">
+      <p class="muted">Ця Політика конфіденційності пояснює, яку інформацію збирає застосунок "Dogoku: Woof Patrol" ("Гра", "ми"), як вона використовується і які права маєш ти як користувач.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">01</span>Інформація, яку ми не збираємо</h2>
+      <p>Гра не вимагає реєстрації облікового запису, не запитує ім'я, електронну пошту, номер телефону чи будь-які інші персональні дані безпосередньо від тебе. У Грі немає чату, коментарів чи іншого контенту, створеного користувачами.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">02</span>Дані, що зберігаються лише на твоєму пристрої</h2>
+      <p>Прогрес проходження рівнів, обраний скін собаки, налаштування гучності звуку, вібрації та мови зберігаються локально на твоєму пристрої. Ці дані не передаються на жодні наші сервери — у Гри немає власного бекенду чи бази даних користувачів. Видалення застосунку видаляє ці дані повністю.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">03</span>Дані, що збираються рекламними партнерами</h2>
+      <p>Гра показує рекламу через мережу AppLovin MAX, яка може підключати інші рекламні мережі (медіація). Ці партнери можуть автоматично збирати рекламний ідентифікатор пристрою (Google Advertising ID), тип і модель пристрою, версію ОС, IP-адресу (з якої може визначатись приблизна геолокація — країна чи регіон) та дані про взаємодію з рекламою (перегляди, кліки) — з метою показу й персоналізації реклами, вимірювання її ефективності та запобігання шахрайству.</p>
+      <p class="muted">Ми не контролюємо напряму, як саме кожен окремий рекламний партнер обробляє ці дані — рекомендуємо ознайомитись із політикою конфіденційності AppLovin: <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a>.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">04</span>Твій вибір щодо реклами</h2>
+      <p>Ти можеш обмежити персоналізовану рекламу через налаштування свого пристрою Android (Налаштування → Google → Реклама → "Вимкнути персоналізацію реклами" або "Скинути рекламний ідентифікатор"). Користувачам з ЄС, Великої Британії та Швейцарії показується запит на згоду щодо збору даних для реклами.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">05</span>Діти</h2>
+      <p>Гра розрахована на загальну аудиторію і не спрямована спеціально на дітей віком до 13 років. Ми свідомо не збираємо персональні дані дітей.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">06</span>Покупки в застосунку</h2>
+      <p>Гра пропонує одноразову покупку "Прибрати рекламу" через Google Play Billing — офіційну систему оплати Google Play. Після покупки міжсторінкова реклама вимикається назавжди на цьому Google-акаунті (можна відновити на іншому пристрої кнопкою "Відновити покупки"). Ми не бачимо й не зберігаємо дані твоєї картки чи платежу — усю обробку оплати виконує Google Play, а не наш застосунок.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">07</span>Безпека даних</h2>
+      <p>Оскільки Гра не збирає й не зберігає персональні дані на власних серверах, ризик витоку персональних даних з нашого боку мінімальний. Дані, що обробляють рекламні партнери, захищаються відповідно до їхніх власних політик безпеки.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">08</span>Твої права</h2>
+      <p>Залежно від країни проживання, ти можеш мати право на доступ, виправлення чи видалення даних, які обробляють наші рекламні партнери, а також право відкликати згоду на обробку даних для реклами. Для запитів щодо даних, які обробляє безпосередньо AppLovin, звертайся за посиланням у пункті 3. Для будь-яких інших запитів пиши нам на <a href="mailto:r.maiboroda777@gmail.com">r.maiboroda777@gmail.com</a>.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">09</span>Зміни до цієї Політики</h2>
+      <p>Ми можемо оновлювати цю Політику. Дата останнього оновлення вказана вгорі сторінки. Продовження використання Гри після змін означає прийняття оновленої Політики.</p>
+    </section>
+
+    <section class="clause">
+      <h2><span class="num">10</span>Контакти</h2>
+      <p>Питання щодо цієї Політики: <a href="mailto:r.maiboroda777@gmail.com">r.maiboroda777@gmail.com</a></p>
+    </section>
+
+  </div>
+
+  <footer class="doc-footer">
+    <span data-i18n-foot-left>Dogoku: Woof Patrol — Privacy Policy</span>
+    <span data-i18n-foot-right>Last updated Sep 7, 2026</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var enBtn = document.getElementById('btn-en');
+  var uaBtn = document.getElementById('btn-ua');
+  var blocks = document.querySelectorAll('.lang-block');
+  var tag = document.querySelector('[data-i18n-tag]');
+  var footL = document.querySelector('[data-i18n-foot-left]');
+  var footR = document.querySelector('[data-i18n-foot-right]');
+
+  var copy = {
+    en: { tag: 'PRIVACY POLICY', footL: 'Dogoku: Woof Patrol — Privacy Policy', footR: 'Last updated Sep 7, 2026' },
+    ua: { tag: 'ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ', footL: 'Dogoku: Woof Patrol — Політика конфіденційності', footR: 'Востаннє оновлено 7.09.2026' }
+  };
+
+  function setLang(lang){
+    blocks.forEach(function(b){ b.hidden = (b.getAttribute('data-lang') !== lang); });
+    enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+    uaBtn.setAttribute('aria-pressed', String(lang === 'ua'));
+    tag.textContent = copy[lang].tag;
+    footL.textContent = copy[lang].footL;
+    footR.textContent = copy[lang].footR;
+    document.documentElement.setAttribute('lang', lang === 'ua' ? 'uk' : 'en');
+  }
+
+  enBtn.addEventListener('click', function(){ setLang('en'); });
+  uaBtn.addEventListener('click', function(){ setLang('ua'); });
+})();
+</script>
